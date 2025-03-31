@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  flashloan_bot:
+    build: .
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./trade_log.csv:/app/trade_log.csv
+    container_name: quantum_flashloan_ai
